@@ -6,7 +6,7 @@ const setDataMovies = (data: object) => ({
 });
 
 export const getMoviesFromApiAsync = (dispatch: any) => {
-  new Promise((resolve: any, reject: any) => {
+  return new Promise((resolve: any, reject: any) => {
     fetch('https://reactnative.dev/movies.json')
       .then(response => response.json())
       .then(json => {

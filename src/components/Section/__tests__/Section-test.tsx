@@ -10,5 +10,5 @@ import Section from '../index';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
-  renderer.create(<Section title={'title'}></Section>);
+  renderer.create(<Section title={'title'} />);
 });
