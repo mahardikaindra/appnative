@@ -10,5 +10,6 @@ const cUseCases = useCases(cRepositorires)
 const cPresenters = presenters(cUseCases)
 
 export default {
-  session: cPresenters.session
+  session: cPresenters.session,
+  character: cPresenters.character
 } as IPresenters
