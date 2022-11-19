@@ -1,7 +1,7 @@
 import IRepositories from './interfaces/iRepositories'
 import IUseCases from './interfaces/iUseCases'
-import Session from '@domains/useCases/Session'
-import Character from '@domains/useCases/Character'
+import Session from '../../domains/useCases/Session'
+import Character from '../../domains/useCases/Character'
 
 export default (repositories: IRepositories): IUseCases => {
   return {

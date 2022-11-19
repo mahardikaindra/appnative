@@ -1,6 +1,6 @@
 import IUseCases from './interfaces/iUseCases'
-import SessionPresenter from '@adapters/presenters/Session'
-import CharacterPresenter from '@adapters/presenters/Character'
+import SessionPresenter from '../../adapters/presenters/Session'
+import CharacterPresenter from '../../adapters/presenters/Character'
 
 export default (useCases: IUseCases) => {
   return {
