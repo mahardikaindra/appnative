@@ -21,7 +21,11 @@ const Home: React.FC<PropsWithChildren<{}>> = ({}) => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <NavigationBar title={'Characters'} />
+        <NavigationBar
+          title={'Characters'}
+          back={false}
+          onPress={() => {}}
+        />
       </ScrollView>
     </Container>
   );

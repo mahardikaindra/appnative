@@ -36,7 +36,7 @@ const NavigationBar: React.FC<PropsWithChildren<{title: string, back: boolean, o
     <SafeAreaView style={backgroundStyle}>
       <View style={styles.container}>
         <View style={styles.row}>
-          {!back && backButton}
+          {back && backButton}
           <Text style={styles.title}>{title}</Text>
         </View>
       </View>
