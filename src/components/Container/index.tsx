@@ -21,10 +21,13 @@ const Container: React.FC<PropsWithChildren<{}>> = ({children}) => {
   };
 
   return (
+    <>
+    <SafeAreaView style={{backgroundColor:'#5D5FEF'}} />
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <StatusBar barStyle={'light-content'} backgroundColor={'#5D5FEF'} />
       {children}
     </SafeAreaView>
+    </>
   );
 };
 

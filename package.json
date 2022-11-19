@@ -49,6 +49,7 @@
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.69.3",
+    "@types/react-native-vector-icons": "^6.4.12",
     "@types/react-redux": "^7.1.24",
     "@types/react-test-renderer": "^18.0.0",
     "@types/redux-logger": "^3.0.9",
@@ -78,7 +79,9 @@
   },
   "jest": {
     "preset": "react-native",
-    "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -88,7 +91,7 @@
       "node"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|@react-navigation|@react-native|react-native-swipe-gestures|@storybook/addon-contexts)/)"
+      "node_modules/(?!(react-native|@react-navigation|@react-native|react-native-swipe-gestures|react-native-vector-icons|@storybook/addon-contexts)/)"
     ]
   }
 }
