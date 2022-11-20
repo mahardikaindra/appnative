@@ -19,7 +19,7 @@ class CharacterRepository implements ICharacterRepository {
     }
   }
 
-  async getCharacter(id: ICharacterDTO): Promise<any> {
+  async getCharacter({id}: ICharacterDTO): Promise<any> {
     const response = await this.http.request({
       method: 'GET',
       url: `https://rickandmortyapi.com/api/character/${id}`,

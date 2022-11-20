@@ -1,4 +1,6 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
+
+const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   avatar: {
@@ -8,6 +10,9 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
+  },
+  container: {
+    height: height,
   },
   sectionTitle: {
     fontSize: 24,
@@ -25,7 +30,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Lekton-Italic',
   },
   name: {fontSize: 16, fontFamily: 'Lekton-Bold', color: 'black'},
+  title: {fontSize: 20, fontFamily: 'Lekton-Bold', color: 'black'},
   species: {fontSize: 14, fontFamily: 'Lekton-Regular', color: 'black'},
+  status: {fontSize: 14, fontFamily: 'Lekton-Regular', color: 'black'},
   nameShimmer: {height: 16, marginBottom: 4},
   speciesShimmer: {height: 14, marginTop: 4, width: 100},
   info: {marginHorizontal: 16, alignItems: 'flex-start'},
@@ -35,7 +42,39 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     alignItems: 'center',
   },
+  detailStyle: {
+    color: 'white',
+    fontSize: 14,
+    fontWeight: '400',
+    fontFamily: 'Lekton-Regular',
+  },
+  detail: {},
+  detailInfo: {
+    backgroundColor: '#EF5DA8',
+    margin: 16,
+    borderRadius: 4,
+    padding: 10,
+  },
+  detailInfoShimmer: {
+    backgroundColor: '#C4C4C4',
+    margin: 16,
+    borderRadius: 4,
+    width: width * 0.9,
+    height: height * 0.1,
+  },
+  avatarDetail: {
+    width: width,
+    height: height * 0.5,
+  },
+  detailWrapper: {height: '100%'},
   wrapper: {margin: 16, height: '100%'},
+  nameWrapper: {marginHorizontal: 16, marginTop: 16},
+  divider: {
+    height: 1,
+    backgroundColor: '#C4C4C4',
+    marginHorizontal: width * 0.2,
+    marginVertical: 20,
+  },
 });
 
 export default styles;

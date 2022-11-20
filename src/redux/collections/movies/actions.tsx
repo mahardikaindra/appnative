@@ -1,4 +1,4 @@
-import {SET_DATA_MOVIES} from '../types';
+import {SET_DATA_MOVIES, SET_CHARACTER_ID} from '../types';
 
 const setDataMovies = (data: object) => ({
   type: SET_DATA_MOVIES,
@@ -17,4 +17,15 @@ export const getMoviesFromApiAsync = (dispatch: any) => {
         reject(error);
       });
   });
+};
+
+const setDataCharacter = (id: number) => ({
+  type: SET_CHARACTER_ID,
+  id,
+});
+
+export const setDetailCharacter = (id: number) => {
+  return (dispatch: any) => {
+    dispatch(setDataCharacter(id));
+  };
 };

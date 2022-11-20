@@ -1,4 +1,4 @@
-import {SET_DATA_MOVIES} from '../types';
+import {SET_DATA_MOVIES, SET_CHARACTER_ID} from '../types';
 import createReducer from '../../utils/createReducers';
 
 const initialState = {
@@ -10,3 +10,12 @@ export const dataMovies = createReducer(initialState, {
     return {...state, data: action.data};
   },
 });
+
+export const dataCharacter = createReducer(
+  {},
+  {
+    [SET_CHARACTER_ID](state: any, action: any) {
+      return {...state, id: action.id};
+    },
+  },
+);

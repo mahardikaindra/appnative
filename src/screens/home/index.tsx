@@ -1,6 +1,13 @@
-import React, {type PropsWithChildren, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
-import {useColorScheme, Image, FlatList, View, Text} from 'react-native';
+import {
+  useColorScheme,
+  Image,
+  FlatList,
+  TouchableOpacity,
+  View,
+  Text,
+} from 'react-native';
 import {bindActionCreators} from 'redux';
 import {ActionCreators} from '../../redux/actions';
 import {Container, NavigationBar} from '../../components';
@@ -13,7 +20,7 @@ import {createShimmerPlaceholder} from 'react-native-shimmer-placeholder';
 
 const ShimmerPlaceHolder = createShimmerPlaceholder(LinearGradient);
 
-const Home: React.FC<PropsWithChildren<{}>> = ({}) => {
+const Home = (props: any) => {
   const [dataSource, setDataSource] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const isDarkMode = useColorScheme() === 'dark';
@@ -37,17 +44,23 @@ const Home: React.FC<PropsWithChildren<{}>> = ({}) => {
 
   const renderItem = ({item}: any) => {
     return (
-      <View key={item.id} style={styles.itemCharacter}>
-        <Image
-          source={{uri: `${item.image}`}}
-          style={styles.avatar}
-          resizeMode={'contain'}
-        />
-        <View style={styles.info}>
-          <Text style={styles.name}>{item.name}</Text>
-          <Text style={styles.species}>{item.species}</Text>
+      <TouchableOpacity
+        onPress={() => {
+          props.setDetailCharacter(item.id);
+          props.navigation.navigate('Detail');
+        }}>
+        <View key={item.id} style={styles.itemCharacter}>
+          <Image
+            source={{uri: `${item.image}`}}
+            style={styles.avatar}
+            resizeMode={'contain'}
+          />
+          <View style={styles.info}>
+            <Text style={styles.name}>{item.name}</Text>
+            <Text style={styles.species}>{item.species}</Text>
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   };
 
@@ -90,11 +103,7 @@ const Home: React.FC<PropsWithChildren<{}>> = ({}) => {
   );
 };
 
-const mapStateToProps = (state: any) => ({
-  dataMovies: state.dataMovies,
-});
-
 const mapDispatchToProps = (dispatch: any) =>
   bindActionCreators(ActionCreators, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(null, mapDispatchToProps)(Home);
