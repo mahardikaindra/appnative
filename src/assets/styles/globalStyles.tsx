@@ -37,10 +37,26 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontFamily: 'Lekton-Italic',
   },
-  name: {fontSize: 16, fontFamily: 'Lekton-Bold', color: 'black'},
-  title: {fontSize: 20, fontFamily: 'Lekton-Bold', color: 'black'},
-  species: {fontSize: 14, fontFamily: 'Lekton-Regular', color: 'black'},
-  status: {fontSize: 14, fontFamily: 'Lekton-Regular', color: 'black'},
+  name: {
+    fontSize: 16,
+    fontFamily: 'Lekton-Bold',
+    color: 'black',
+  },
+  title: {
+    fontSize: 20,
+    fontFamily: 'Lekton-Bold',
+    color: 'black',
+  },
+  species: {
+    fontSize: 14,
+    fontFamily: 'Lekton-Regular',
+    color: 'black',
+  },
+  status: {
+    fontSize: 14,
+    fontFamily: 'Lekton-Regular',
+    color: 'black',
+  },
   nameShimmer: {
     height: 16,
     marginBottom: 4,
@@ -53,7 +69,10 @@ const styles = StyleSheet.create({
     width: 100,
     backgroundColor: '#C4C4C4',
   },
-  info: {marginHorizontal: 16, alignItems: 'flex-start'},
+  info: {
+    marginHorizontal: 16,
+    alignItems: 'flex-start',
+  },
   itemCharacter: {
     flexDirection: 'row',
     minHeight: 40,
@@ -98,9 +117,17 @@ const styles = StyleSheet.create({
     height: height * 0.5,
     backgroundColor: '#C4C4C4',
   },
-  detailWrapper: {height: '100%'},
-  wrapper: {margin: 16, height: '100%'},
-  nameWrapper: {marginHorizontal: 16, marginTop: 16},
+  detailWrapper: {
+    height: '100%',
+  },
+  wrapper: {
+    margin: 16,
+    height: '100%',
+  },
+  nameWrapper: {
+    marginHorizontal: 16,
+    marginTop: 16,
+  },
   divider: {
     height: 1,
     backgroundColor: '#C4C4C4',
