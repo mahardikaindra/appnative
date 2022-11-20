@@ -9,11 +9,6 @@ import {styles} from '../../assets/styles';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import di from '../../di';
 
-import LinearGradient from 'react-native-linear-gradient';
-import {createShimmerPlaceholder} from 'react-native-shimmer-placeholder';
-
-const ShimmerPlaceHolder = createShimmerPlaceholder(LinearGradient);
-
 interface DetailInterface {
   name: string;
   image: string;
@@ -76,11 +71,11 @@ const Detail = (props: any) => {
   const shimmerLoading = () => {
     return (
       <View style={styles.detail}>
-        <ShimmerPlaceHolder style={styles.avatarDetail} />
+        <View style={styles.avatarDetailShimmer} />
         <View style={styles.nameWrapper}>
-          <ShimmerPlaceHolder />
+          <View style={styles.nameShimmer} />
         </View>
-        <ShimmerPlaceHolder style={styles.detailInfoShimmer} />
+        <View style={styles.detailInfoShimmer} />
         <View style={styles.divider} />
       </View>
     );

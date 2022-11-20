@@ -6757,11 +6757,6 @@ react-native-iphone-x-helper@^1.3.1:
   resolved "https://prdc-support.anabatic.com:7443/nexus/repository/npm-group/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz#20c603e9a0e765fd6f97396638bdeb0e5a60b010"
   integrity sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg==
 
-react-native-linear-gradient@^2.6.2:
-  version "2.6.2"
-  resolved "https://prdc-support.anabatic.com:7443/nexus/repository/npm-group/react-native-linear-gradient/-/react-native-linear-gradient-2.6.2.tgz#56598a76832724b2afa7889747635b5c80948f38"
-  integrity sha512-Z8Xxvupsex+9BBFoSYS87bilNPWcRfRsGC0cpJk72Nxb5p2nEkGSBv73xZbEHnW2mUFvP+huYxrVvjZkr/gRjQ==
-
 react-native-paper@^4.12.4:
   version "4.12.5"
   resolved "https://prdc-support.anabatic.com:7443/nexus/repository/npm-group/react-native-paper/-/react-native-paper-4.12.5.tgz#5ea4bbe02d416d17802a199de748700358c11d3a"
@@ -6783,11 +6778,6 @@ react-native-screens@^3.17.0:
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
-
-react-native-shimmer-placeholder@^2.0.9:
-  version "2.0.9"
-  resolved "https://prdc-support.anabatic.com:7443/nexus/repository/npm-group/react-native-shimmer-placeholder/-/react-native-shimmer-placeholder-2.0.9.tgz#0096932289bd9ec5747cd4f1c9d15f91ba02157a"
-  integrity sha512-s2pfAAO6uaybREYM2KcaxP3c2XlZvLfHfzmhMlGEoOhSKaoM92KpA1Hx0BeC75yilkliJuowqO/hFzvLB0h7hg==
 
 react-native-vector-icons@^9.2.0:
   version "9.2.0"

@@ -7,6 +7,11 @@ const styles = StyleSheet.create({
     height: 40,
     width: 40,
   },
+  avatarShimmer: {
+    height: 40,
+    width: 40,
+    backgroundColor: '#C4C4C4',
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
@@ -36,8 +41,18 @@ const styles = StyleSheet.create({
   title: {fontSize: 20, fontFamily: 'Lekton-Bold', color: 'black'},
   species: {fontSize: 14, fontFamily: 'Lekton-Regular', color: 'black'},
   status: {fontSize: 14, fontFamily: 'Lekton-Regular', color: 'black'},
-  nameShimmer: {height: 16, marginBottom: 4},
-  speciesShimmer: {height: 14, marginTop: 4, width: 100},
+  nameShimmer: {
+    height: 16,
+    marginBottom: 4,
+    width: 200,
+    backgroundColor: '#C4C4C4',
+  },
+  speciesShimmer: {
+    height: 14,
+    marginTop: 4,
+    width: 100,
+    backgroundColor: '#C4C4C4',
+  },
   info: {marginHorizontal: 16, alignItems: 'flex-start'},
   itemCharacter: {
     flexDirection: 'row',
@@ -77,6 +92,11 @@ const styles = StyleSheet.create({
   avatarDetail: {
     width: width,
     height: height * 0.5,
+  },
+  avatarDetailShimmer: {
+    width: width,
+    height: height * 0.5,
+    backgroundColor: '#C4C4C4',
   },
   detailWrapper: {height: '100%'},
   wrapper: {margin: 16, height: '100%'},

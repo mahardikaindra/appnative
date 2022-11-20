@@ -14,11 +14,7 @@ import {Container, NavigationBar} from '../../components';
 import {styles} from '../../assets/styles';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import di from '../../di';
-import LinearGradient from 'react-native-linear-gradient';
-import {createShimmerPlaceholder} from 'react-native-shimmer-placeholder';
 // import {styles} from '../../assets/styles'
-
-const ShimmerPlaceHolder = createShimmerPlaceholder(LinearGradient);
 
 const Home = (props: any) => {
   const [dataSource, setDataSource] = useState([]);
@@ -70,10 +66,10 @@ const Home = (props: any) => {
     for (i = 0; i < 6; i++) {
       placeholder.push(
         <View key={i} style={styles.itemCharacter}>
-          <ShimmerPlaceHolder style={styles.avatar} />
+          <View style={styles.avatarShimmer} />
           <View style={styles.info}>
-            <ShimmerPlaceHolder style={styles.nameShimmer} />
-            <ShimmerPlaceHolder style={styles.speciesShimmer} />
+            <View style={styles.nameShimmer} />
+            <View style={styles.speciesShimmer} />
           </View>
         </View>,
       );
