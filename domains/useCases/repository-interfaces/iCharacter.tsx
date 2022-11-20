@@ -1,6 +1,6 @@
-import { ICharacterDTO } from '../../dto/CharacterDTO'
+import {ICharacterDTO} from '../../dto/CharacterDTO';
 
 export interface ICharacterRepository {
-  getAllCharacter(): Promise<any>
-  getCharacter(id: ICharacterDTO): Promise<any>
+  getAllCharacter(): Promise<any>;
+  getCharacter(id: ICharacterDTO): Promise<any>;
 }

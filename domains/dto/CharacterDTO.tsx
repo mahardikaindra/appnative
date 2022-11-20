@@ -1,17 +1,17 @@
 export interface ICharacterParams {
-  id: number
+  id: number;
 }
 
 export interface ICharacterDTO {
-  readonly id: number
+  readonly id: number;
 }
 
 class CharacterDTO implements ICharacterDTO {
-  readonly id: number
+  readonly id: number;
 
   constructor(param: ICharacterParams) {
-    this.id = param.id
+    this.id = param.id;
   }
 }
 
-export default CharacterDTO
+export default CharacterDTO;

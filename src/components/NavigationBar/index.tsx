@@ -9,13 +9,24 @@
  */
 
 import React, {type PropsWithChildren} from 'react';
-import {SafeAreaView, TouchableOpacity, View, Text, useColorScheme} from 'react-native';
+import {
+  SafeAreaView,
+  TouchableOpacity,
+  View,
+  Text,
+  useColorScheme,
+} from 'react-native';
 import styles from './styles';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-
-const NavigationBar: React.FC<PropsWithChildren<{title: string, back: boolean, onPress: any}>> = ({title, back, onPress}) => {
+const NavigationBar: React.FC<
+  PropsWithChildren<{
+    title: string;
+    back: boolean;
+    onPress: any;
+  }>
+> = ({title, back, onPress}) => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -30,7 +41,7 @@ const NavigationBar: React.FC<PropsWithChildren<{title: string, back: boolean, o
         </View>
       </TouchableOpacity>
     </View>
-  )
+  );
 
   return (
     <SafeAreaView style={backgroundStyle}>

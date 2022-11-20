@@ -1,25 +1,23 @@
-import { IStorage } from './interfaces/iStorage'
+import {IStorage} from './interfaces/iStorage';
 
 class MobileStorage implements IStorage {
-
-  private storage: any
+  private storage: any;
 
   constructor(storage: any) {
-    this.storage = storage
+    this.storage = storage;
   }
 
   get(name: string): Promise<string> {
-    return this.storage.getItem(name)
+    return this.storage.getItem(name);
   }
 
   async set(name: string, value: string): Promise<void> {
-    await this.storage.setItem(name, value)
+    await this.storage.setItem(name, value);
   }
 
   remove(name: string): void {
-    this.storage.removeItem(name)
+    this.storage.removeItem(name);
   }
-
 }
 
-export default MobileStorage
+export default MobileStorage;

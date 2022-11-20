@@ -12,7 +12,9 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const Router: React.FC<PropsWithChildren<{}>> = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>

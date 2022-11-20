@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
 
-
 const styles = StyleSheet.create({
   button: {
     paddingRight: 10,
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 });
 

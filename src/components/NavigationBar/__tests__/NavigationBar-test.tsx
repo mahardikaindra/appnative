@@ -10,5 +10,7 @@ import NavigationBar from '../index';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
-  renderer.create(<NavigationBar title={'title'} back={false} onPress={() => {}} />);
+  renderer.create(
+    <NavigationBar title={'title'} back={false} onPress={() => {}} />,
+  );
 });

@@ -9,7 +9,12 @@
  */
 
 import React, {type PropsWithChildren} from 'react';
-import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  StatusBar,
+  useColorScheme,
+} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
@@ -22,13 +27,19 @@ const Container: React.FC<PropsWithChildren<{}>> = ({children}) => {
 
   return (
     <>
-    <SafeAreaView style={{backgroundColor:'#5D5FEF'}} />
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={'light-content'} backgroundColor={'#5D5FEF'} />
-      {children}
-    </SafeAreaView>
+      <SafeAreaView style={styles.top} />
+      <SafeAreaView style={backgroundStyle}>
+        <StatusBar barStyle={'light-content'} backgroundColor={'#5D5FEF'} />
+        {children}
+      </SafeAreaView>
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  top: {
+    backgroundColor: '#5D5FEF',
+  },
+});
 
 export default Container;

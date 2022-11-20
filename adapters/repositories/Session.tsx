@@ -1,13 +1,12 @@
-import { ISessionRepository } from '../../domains/useCases/repository-interfaces/iSession'
-import { IUserDTO } from '../../domains/dto/UserDTO'
-import { IHttp } from '../infrastructures/interfaces/iHttp'
-import { IStorage } from '../infrastructures/interfaces/iStorage'
+import {ISessionRepository} from '../../domains/useCases/repository-interfaces/iSession';
+import {IUserDTO} from '../../domains/dto/UserDTO';
+import {IHttp} from '../infrastructures/interfaces/iHttp';
+import {IStorage} from '../infrastructures/interfaces/iStorage';
 
 class SessionRepository implements ISessionRepository {
-
   constructor(
     private readonly http: IHttp,
-    private readonly storage: IStorage
+    private readonly storage: IStorage,
   ) {}
 
   async login(userDTO: IUserDTO): Promise<any> {
@@ -15,29 +14,30 @@ class SessionRepository implements ISessionRepository {
       method: 'POST',
       url: 'http://localhost:7777/login',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: {
         id: userDTO.id,
-        pw: userDTO.pw
-      }
-    })
+        pw: userDTO.pw,
+      },
+    });
 
-    if(response?.token) return response.token
+    if (response?.token) {
+      return response.token;
+    }
   }
 
   getToken(): Promise<string> {
-    return this.storage.get('token')
+    return this.storage.get('token');
   }
 
   setToken(token: string): void {
-    this.storage.set('token', token)
+    this.storage.set('token', token);
   }
 
   removeToken(): void {
-    this.storage.remove('token')
+    this.storage.remove('token');
   }
-
 }
 
-export default SessionRepository
+export default SessionRepository;
