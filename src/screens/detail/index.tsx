@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 import FastImage from 'react-native-fast-image';
-import {useColorScheme, ScrollView, View, Text} from 'react-native';
+import {useColorScheme, FlatList, ScrollView, View, Text} from 'react-native';
 import {bindActionCreators} from 'redux';
 import {ActionCreators} from '../../redux/actions';
 import {Container, NavigationBar} from '../../components';
@@ -20,10 +20,13 @@ interface DetailInterface {
   species: string;
   gender: string;
   status: string;
+  episode: [];
 }
 
 const Detail = (props: any) => {
   const [dataSource, setDataSource] = useState<DetailInterface>();
+  const [episodeId, setDataEpisodeId] = useState([]);
+  const [episodes, setDataEpisodes] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -38,13 +41,37 @@ const Detail = (props: any) => {
         if (data) {
           setLoading(false);
           setDataSource(data);
+          setDataEpisodeId(
+            data.episode.map((item: string) => {
+              return item.replace(
+                'https://rickandmortyapi.com/api/episode/',
+                '',
+              );
+            }),
+          );
         } else {
           setLoading(false);
+          setDataEpisodeId([]);
           setDataSource(undefined);
         }
       })();
     }
   }, [props.dataCharacter]);
+
+  useEffect(() => {
+    if (episodeId.length > 1) {
+      (async () => {
+        const data = await di.episode.getEpisode(episodeId);
+        if (data) {
+          setDataEpisodes(data);
+          setLoading(false);
+        } else {
+          setDataEpisodes([]);
+          setLoading(false);
+        }
+      })();
+    }
+  }, [episodeId]);
 
   const shimmerLoading = () => {
     return (
@@ -58,7 +85,20 @@ const Detail = (props: any) => {
       </View>
     );
   };
-  //
+
+  const renderItem = ({item}: any) => {
+    return (
+      <View key={item.id} style={styles.itemCharacter}>
+        <View style={styles.info}>
+          <Text style={styles.name}>
+            {item.name} - {item.episode}
+          </Text>
+          <Text style={styles.species}>{item.air_date}</Text>
+        </View>
+      </View>
+    );
+  };
+
   const detailCharacters = () => {
     return (
       <View style={styles.detail}>
@@ -76,6 +116,14 @@ const Detail = (props: any) => {
           <Text style={styles.detailStyle}>status: {dataSource?.status}</Text>
         </View>
         <View style={styles.divider} />
+        <View>
+          <FlatList
+            data={episodes}
+            renderItem={renderItem}
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={styles.flatList}
+          />
+        </View>
       </View>
     );
   };

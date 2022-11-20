@@ -12,4 +12,5 @@ const cPresenters = presenters(cUseCases);
 export default {
   session: cPresenters.session,
   character: cPresenters.character,
+  episode: cPresenters.episode,
 } as IPresenters;

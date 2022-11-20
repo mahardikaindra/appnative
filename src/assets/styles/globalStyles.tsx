@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
   container: {
     height: height,
   },
+  flatList: {
+    paddingBottom: Platform.select({ios: 100, android: 50}),
+  },
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',

@@ -87,6 +87,7 @@ const Home = (props: any) => {
         data={dataSource}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.flatList}
       />
     );
   };
