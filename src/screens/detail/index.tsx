@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
-import {useColorScheme, Image, ScrollView, View, Text} from 'react-native';
+import FastImage from 'react-native-fast-image';
+import {useColorScheme, ScrollView, View, Text} from 'react-native';
 import {bindActionCreators} from 'redux';
 import {ActionCreators} from '../../redux/actions';
 import {Container, NavigationBar} from '../../components';
@@ -61,10 +62,10 @@ const Detail = (props: any) => {
   const detailCharacters = () => {
     return (
       <View style={styles.detail}>
-        <Image
+        <FastImage
           source={{uri: `${dataSource?.image}`}}
           style={styles.avatarDetail}
-          resizeMode={'contain'}
+          resizeMode={FastImage.resizeMode.contain}
         />
         <View style={styles.nameWrapper}>
           <Text style={styles.title}>{dataSource?.name}</Text>

@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "android": "ENVFILE=.env react-native run-android",
-    "both": "ENVFILE=.env react-native run-android && ENVFILE=.env react-native run-ios --simulator='iPhone 8'",
-    "ios": "rm -rf ~/Library/Developer/Xcode/DerivedData && ENVFILE=.env react-native run-ios --simulator='iPhone 8'",
+    "both": "ENVFILE=.env react-native run-android && ENVFILE=.env react-native run-ios --simulator='iPhone 14'",
+    "ios": "rm -rf ~/Library/Developer/Xcode/DerivedData && ENVFILE=.env react-native run-ios --simulator='iPhone 14'",
     "ios-install": "npx pod-install ios",
     "start": "react-native start --reset-cache",
     "test": "jest",

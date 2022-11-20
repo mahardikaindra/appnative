@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 import {
   useColorScheme,
-  Image,
   FlatList,
   TouchableOpacity,
   View,
   Text,
 } from 'react-native';
+import FastImage from 'react-native-fast-image';
 import {bindActionCreators} from 'redux';
 import {ActionCreators} from '../../redux/actions';
 import {Container, NavigationBar} from '../../components';
@@ -50,7 +50,7 @@ const Home = (props: any) => {
           props.navigation.navigate('Detail');
         }}>
         <View key={item.id} style={styles.itemCharacter}>
-          <Image
+          <FastImage
             source={{uri: `${item.image}`}}
             style={styles.avatar}
             resizeMode={'contain'}

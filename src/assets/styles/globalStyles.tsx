@@ -1,6 +1,6 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet, Dimensions, Platform} from 'react-native';
 
-const {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('screen');
 
 const styles = StyleSheet.create({
   avatar: {
@@ -47,8 +47,17 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '400',
     fontFamily: 'Lekton-Regular',
+    marginVertical: Platform.select({
+      ios: 4,
+      android: 0,
+    }),
   },
-  detail: {},
+  detail: {
+    top: Platform.select({
+      ios: -16,
+      android: -11,
+    }),
+  },
   detailInfo: {
     backgroundColor: '#EF5DA8',
     margin: 16,
