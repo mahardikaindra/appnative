@@ -61,7 +61,6 @@ buck-out/
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
-.env
 .env.prod
 .env.stage
 ios/tmp.xcconfig
