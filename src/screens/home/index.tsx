@@ -7,21 +7,30 @@ import {Container, NavigationBar} from '../../components';
 import {styles} from '../../assets/styles';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import di from '../../di';
+import LinearGradient from 'react-native-linear-gradient';
+import {createShimmerPlaceholder} from 'react-native-shimmer-placeholder';
 // import {styles} from '../../assets/styles'
+
+const ShimmerPlaceHolder = createShimmerPlaceholder(LinearGradient);
 
 const Home: React.FC<PropsWithChildren<{}>> = ({}) => {
   const [dataSource, setDataSource] = useState([]);
+  const [isLoading, setLoading] = useState(true);
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.lighter : Colors.white,
   };
 
   useEffect(() => {
     (async () => {
       const data = await di.character.getAllCharacter();
       if (data) {
+        setLoading(false);
         setDataSource(data.results);
+      } else {
+        setLoading(false);
+        setDataSource([]);
       }
     })();
   }, []);
@@ -42,16 +51,39 @@ const Home: React.FC<PropsWithChildren<{}>> = ({}) => {
     );
   };
 
+  const shimmerLoading = () => {
+    let placeholder = [],
+      i;
+    for (i = 0; i < 6; i++) {
+      placeholder.push(
+        <View key={i} style={styles.itemCharacter}>
+          <ShimmerPlaceHolder style={styles.avatar} />
+          <View style={styles.info}>
+            <ShimmerPlaceHolder style={styles.nameShimmer} />
+            <ShimmerPlaceHolder style={styles.speciesShimmer} />
+          </View>
+        </View>,
+      );
+    }
+    return placeholder;
+  };
+
+  const listCharacters = () => {
+    return (
+      <FlatList
+        data={dataSource}
+        renderItem={renderItem}
+        showsVerticalScrollIndicator={false}
+      />
+    );
+  };
+
   return (
     <Container>
       <View style={backgroundStyle}>
         <NavigationBar title={'Characters'} back={false} onPress={() => {}} />
         <View style={styles.wrapper}>
-          <FlatList
-            data={dataSource}
-            renderItem={renderItem}
-            showsVerticalScrollIndicator={false}
-          />
+          {isLoading ? shimmerLoading() : listCharacters()}
         </View>
       </View>
     </Container>

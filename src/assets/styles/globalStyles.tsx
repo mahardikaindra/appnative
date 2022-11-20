@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
   },
   name: {fontSize: 16, fontFamily: 'Lekton-Bold', color: 'black'},
   species: {fontSize: 14, fontFamily: 'Lekton-Regular', color: 'black'},
+  nameShimmer: {height: 16, marginBottom: 4},
+  speciesShimmer: {height: 14, marginTop: 4, width: 100},
   info: {marginHorizontal: 16, alignItems: 'flex-start'},
   itemCharacter: {
     flexDirection: 'row',
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     alignItems: 'center',
   },
-  wrapper: {margin: 16},
+  wrapper: {margin: 16, height: '100%'},
 });
 
 export default styles;
