@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 f1c2b5d973c0c6b4b1bc61e60a7d88f247a6b724 rakamahardika <rakamahardika22@gmail.com> 1668782931 +0700	clone: from github.com:mahardikaindra/appnative.git
+f1c2b5d973c0c6b4b1bc61e60a7d88f247a6b724 01b241778337bd074d91ca10954814aa3596968c rakamahardika <rakamahardika22@gmail.com> 1668811313 +0700	commit: Run Test
+01b241778337bd074d91ca10954814aa3596968c 09f57c06e8a4ffe7590564f06cf860860be03287 rakamahardika <rakamahardika22@gmail.com> 1668900507 +0700	pull: Fast-forward
+09f57c06e8a4ffe7590564f06cf860860be03287 ef9199964ada2af672b2d85f1d375f7e30cd72fe rakamahardika <rakamahardika22@gmail.com> 1668907048 +0700	commit: Lint check
+ef9199964ada2af672b2d85f1d375f7e30cd72fe eab528ed628e04d41276e94998656aac90a26986 rakamahardika <rakamahardika22@gmail.com> 1668908867 +0700	commit: Shimmer
+eab528ed628e04d41276e94998656aac90a26986 d3c1a14e1c831669d73d66952a3422c0c70128fc rakamahardika <rakamahardika22@gmail.com> 1668913872 +0700	commit: Detail Page
+d3c1a14e1c831669d73d66952a3422c0c70128fc c6bd6c658547f4965488e10dddd2368cc134dafd rakamahardika <rakamahardika22@gmail.com> 1668915058 +0700	commit: Styling iOS
+c6bd6c658547f4965488e10dddd2368cc134dafd ed85d54cea5f85a311be6319726140c7ebb4272c rakamahardika <rakamahardika22@gmail.com> 1668919592 +0700	commit: Get Episode
+ed85d54cea5f85a311be6319726140c7ebb4272c 8fe6ec5fc58683fd6dfb0b7ec5ca3b51cb730eb2 rakamahardika <rakamahardika22@gmail.com> 1668925881 +0700	commit: Shimmer modified
+8fe6ec5fc58683fd6dfb0b7ec5ca3b51cb730eb2 bf76584407a3db6c90aa6d90c2747680bb6f34f6 rakamahardika <rakamahardika22@gmail.com> 1668926201 +0700	commit: Linter Global Styles
+bf76584407a3db6c90aa6d90c2747680bb6f34f6 2dd58ee5867652817aa3ed6f4542d8acdc152788 rakamahardika <rakamahardika22@gmail.com> 1668926237 +0700	commit: Add env file
