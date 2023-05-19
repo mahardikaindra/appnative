@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">@string/APPNAME</string>
+    <string name="app_name">Qiwii</string>
     <string moduleConfig="true" name="CodePushDeploymentKey">@string/CODEPUSHDEPLOYMENTKEY</string>
 </resources>

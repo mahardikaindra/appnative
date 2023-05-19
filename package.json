@@ -1,5 +1,5 @@
 {
-  "name": "appnative",
+  "name": "qiwii",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,13 +10,13 @@
     "start": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "appcenter-production": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative -d Production",
-    "appcenter-development": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative -d Development",
-    "appcenter-staging": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative -d Staging",
-    "appcenter-ios-production": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative-iOS -d Production",
-    "appcenter-ios-staging": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative-iOS -d Staging",
-    "appcenter-ios-development": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative-iOS -d Development",
-    "remove-watch": "watchman watch-del '/Users/rakamahardika/Bussiness/appnative' ; watchman watch-project '/Users/rakamahardika/Bussiness/appnative'"
+    "appcenter-production": "appcenter codepush release-react -a developer.earetech-gmail.com/qiwii -d Production",
+    "appcenter-development": "appcenter codepush release-react -a developer.earetech-gmail.com/qiwii -d Development",
+    "appcenter-staging": "appcenter codepush release-react -a developer.earetech-gmail.com/qiwii -d Staging",
+    "appcenter-ios-production": "appcenter codepush release-react -a developer.earetech-gmail.com/qiwii-iOS -d Production",
+    "appcenter-ios-staging": "appcenter codepush release-react -a developer.earetech-gmail.com/qiwii-iOS -d Staging",
+    "appcenter-ios-development": "appcenter codepush release-react -a developer.earetech-gmail.com/qiwii-iOS -d Development",
+    "remove-watch": "watchman watch-del '/Users/rakamahardika/Bussiness/qiwii' ; watchman watch-project '/Users/rakamahardika/Bussiness/qiwii'"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.10",

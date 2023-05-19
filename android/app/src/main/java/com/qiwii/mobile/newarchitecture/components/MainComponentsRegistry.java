@@ -1,4 +1,4 @@
-package com.appnative.newarchitecture.components;
+package com.qiwii.mobile.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

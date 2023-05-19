@@ -1,4 +1,4 @@
-package com.appnative.newarchitecture;
+package com.qiwii.mobile.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.appnative.BuildConfig;
-import com.appnative.newarchitecture.components.MainComponentsRegistry;
-import com.appnative.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.qiwii.mobile.BuildConfig;
+import com.qiwii.mobile.newarchitecture.components.MainComponentsRegistry;
+import com.qiwii.mobile.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
